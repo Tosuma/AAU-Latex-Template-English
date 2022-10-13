@@ -1,0 +1,75 @@
+% Setting level of numbering (default for "report" is 3). With ''-1'' you have non number also for chapters
+\setcounter{secnumdepth}{3} 
+
+% Maybe not necessary
+\usepackage{wrapfig}
+
+% Makes it possible to have multiple figures next to each other
+\usepackage{subcaption}
+
+% Makes highlights available
+\usepackage{color,soul}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code listing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{JSStyle}{
+    backgroundcolor=\color{backgroundColour},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    numberstyle=\tiny\color{mGray},
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize \ttfamily,
+    language=Java
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PSEUDOCODE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{program}
+
+\algnewcommand{\algvar}{\texttt}
+\algnewcommand{\assign}{\leftarrow}
+\algnewcommand{\NIL}{\texttt{NIL}}
+\algnewcommand{\NULL}{\texttt{NULL}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TikZ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{fit, calc, positioning, shapes.geometric, arrows}
+
+\tikzstyle{b} = [rectangle, draw, fill=white!20, node distance=8em, text width=6em, text centered, rounded corners, minimum height=4em, thick]
+\tikzstyle{c} = [rectangle, draw, inner sep=0.5cm, dashed]
+\tikzstyle{d} = [node distance=0, minimum height=1.5em]
+\tikzstyle{g} = [circle, draw, fill=white!5, very thick, minimum size=3em]
+\tikzstyle{l} = [draw, -latex',thick, line width=.2em]
+\tikzstyle{ll} = [draw, latex'-latex',thick, line width=.2em]
+\tikzstyle{p} = [draw,thick]
+\tikzstyle{tab} = [midway, text width=10em, align=center]
+\tikzstyle{ta} = [tab, above=1.5em]
+\tikzstyle{tb} = [tab, below=1.5em]
