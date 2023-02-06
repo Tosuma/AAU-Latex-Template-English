@@ -10,7 +10,7 @@ This guide assumes the system uses the ``apt`` package manager.
 
 2. Install VS Code
 
-3. Run installation script (``setup.sh``) in WSL
+3. Run installation script (``setupWSL.sh``) in WSL
 
 4. Ready to use
 
