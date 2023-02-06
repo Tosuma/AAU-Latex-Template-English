@@ -1,5 +1,6 @@
 ## Out folder for pdf
 out/
+.vscode/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
