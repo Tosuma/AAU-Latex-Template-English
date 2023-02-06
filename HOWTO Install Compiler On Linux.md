@@ -9,7 +9,7 @@ This guide assumes the system uses the ``apt`` package manager.
 
 1. Install VS Code
 
-2. Run installation script (``setup.sh``) in shell
+2. Run installation script (``setupUbunto.sh``) in shell
 
 3. Ready to use
 
