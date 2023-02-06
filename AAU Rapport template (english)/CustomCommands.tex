@@ -1,12 +1,27 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Highlight text and add a todo
+% Use: "\hltodo{Here goes the text you want to make a comment to}{Here goes your notes to the text}"
 \newcommand{\hltodo}[2]{\texthl{#1}\todo{#2}}
-% Adds the possibility to make a todo to a line of text
-% use "\hltodo{Here goes the text you want to make a comment to}{Here goes your notes to the text}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\newCodeBlock[1]{
-    \begin{center}
-        \texttt{#1}
-    \end{center}
+
+% Make an indented quote
+% NOTE: It is needed to insert a "\cite{}" as the second parameter
+% Use: "\indentquote{Here goes the quote}{\cite{Here goes the cite}}"
+
+\newcommand{\indentquote}[3]
+{
+\begin{center}
+    \begin{minipage}{0.75\textwidth}
+        \textit{``#1''}~#2
+    \end{minipage}
+\end{center}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Rotate text and make bold
+% Use: "\rbf{Here goes the rotation degree (use a number)}{Here goes the text}"
+
+\newcommand{\rbf}[2]{
+    \rotatebox{#1}{\textbf{#2}}
+    }

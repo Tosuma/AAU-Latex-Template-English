@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                              %
+%                Extra packages                %
+%                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert your new packages here
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphics and Tables
+% http://en.wikibooks.org/wiki/LaTeX/Importing_Graphics
+% http://en.wikibooks.org/wiki/LaTeX/Tables
+% http://en.wikibooks.org/wiki/LaTeX/Colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Load a colour package
+\usepackage{xcolor}
+\definecolor{aaublue}{RGB}{33,26,82} % Dark blue
+
+% Gives the possibility to use colors by names.
+% It can also change the color of text or text
+% backgrounds.
+\usepackage{color}
+
+% Makes easier highlights/text background available
+\usepackage{soul, soulutf8}
+
+% The standard graphics inclusion package
+\usepackage{graphicx}
+
+% Set up how figure and table captions are displayed
+\usepackage{caption}
+
+% Makes it possible to have multiple figures next to each other
+\usepackage{subcaption}
+\captionsetup{%
+  font=footnotesize,    % Set font size to footnotesize
+  labelfont=bf          % Bold label (e.g., Figure 3.2) font
+}
+
+% Make the standard latex tables look so much better
+\usepackage{array,booktabs}
+
+% Enable the use of frames around, e.g., theorems
+% The framed package is used in the example environment
+\usepackage{framed}
+
+% Adds support for full page background picture
+\usepackage[contents={},color=gray]{background} % Legacy!!
+
+% Maybe not necessary
+\usepackage{wrapfig}
+
+% Allows for cells spanning multiple rows in a table
+\usepackage{multirow}
+
+% Used for multiple columns
+\usepackage{multicol}
+
+% Advanced tables
+\usepackage{tabularx}
+
+% Width regulations
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{booktabs}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematics
+% http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Defines new environments such as equation,
+% align and split 
+\usepackage{amsmath}
+
+% Adds new math symbols
+\usepackage{amssymb}
+
+% Use theorems in your document
+% The ntheorem package is also used for the example environment
+% When using thmmarks, amsmath must be an option as well. Otherwise \eqref doesn't work anymore.
+\usepackage[framed,amsmath,thmmarks]{ntheorem}
+\newenvironment{inlineCode}{\fontfamily{pcr}\selectfont}{\par}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code listing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Can be used to insert code in the paper - 
+% see the file '!CODE Template' for simple 
+% instructions on how to use
+\usepackage{listings}
+
+% Using the package 'xcolor' to define colors
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{JSStyle}{
+    backgroundcolor=\color{backgroundColour},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    numberstyle=\tiny\color{mGray},
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize \ttfamily,
+    language=Java
+}
+
+\lstdefinestyle{CSharpStyle}{
+    language=Java,
+    basicstyle=\footnotesize \ttfamily,
+    backgroundcolor=\color{backgroundColour},
+    numbers=left,
+    numberstyle=\tiny\color{mGray},
+    numbersep=5pt,
+    tabsize=2,
+    breaklines=true,
+    captionpos=b,
+    breakatwhitespace=false,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    commentstyle=\color{green},
+    keywordstyle=\color{cyan},
+    stringstyle=\color{blue},
+    identifierstyle=\color{red},
+    morekeywords={ abstract, event, struct,
+    as, explicit, null, switch,
+    base, extern, object, this,
+    bool, false, operator, throw,
+    break, finally, out, true,
+    byte, fixed, override, try,
+    case, float, params, typeof,
+    catch, for, private, uint,
+    char, foreach, protected, ulong,
+    checked, goto, public, unchecked,
+    class, if, readonly, unsafe,
+    const, implicit, ref, ushort,
+    continue, in, return, using,
+    decimal, int, sbyte, virtual,
+    default, interface, sealed, volatile,
+    delegate, internal, short, void,
+    do, is, sizeof, while,
+    double, lock, stackalloc,
+    else, long, static, enum, namespace, new, 
+    string, await, Assert, var, async, Task}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pseudocode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% These packages allows the possibility to input
+% pseudocode - see the file '!PSEDOCODE Help' 
+% for simple instruction on how to use
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{program}
+
+\algnewcommand{\algvar}{\texttt}
+\algnewcommand{\assign}{\leftarrow}
+\algnewcommand{\NIL}{\texttt{NIL}}
+\algnewcommand{\NULL}{\texttt{NULL}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TikZ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Tikz can be used to generate diagrams and figures
+\usepackage{tikz}
+\usetikzlibrary{fit, calc, positioning, shapes.geometric, arrows}
+
+\tikzstyle{b} = [rectangle, draw, fill=white!20, node distance=8em, text width=6em, text centered, rounded corners, minimum height=4em, thick]
+\tikzstyle{c} = [rectangle, draw, inner sep=0.5cm, dashed]
+\tikzstyle{d} = [node distance=0, minimum height=1.5em]
+\tikzstyle{g} = [circle, draw, fill=white!5, very thick, minimum size=3em]
+\tikzstyle{l} = [draw, -latex',thick, line width=.2em]
+\tikzstyle{ll} = [draw, latex'-latex',thick, line width=.2em]
+\tikzstyle{p} = [draw,thick]
+\tikzstyle{tab} = [midway, text width=10em, align=center]
+\tikzstyle{ta} = [tab, above=1.5em]
+\tikzstyle{tb} = [tab, below=1.5em]

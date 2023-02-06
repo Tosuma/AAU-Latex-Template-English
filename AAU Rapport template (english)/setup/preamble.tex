@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      DO NOT TOUCH ANYTHING IN THIS FILE      %
+%      UNLESS YOU KNOW WHAT YOU ARE DOING      %
+%                                              %
+%        New packages should be included       %
+%             in the file 'packages'           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \documentclass[11pt,oneside,a4paper,openright]{report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Language, Encoding and Fonts
@@ -13,60 +22,22 @@
 %   Mac    : applemac
 % Notice that you can manually change the input
 % encoding of your files by selecting "save as"
-% an select the desired input encoding. 
+% an select the desired input encoding.
 \usepackage[utf8]{inputenc}
+
 % Make latex understand and use the typographic
 % rules of the language used in the document.
+%%% Change this to danish for danish typesettings %%%
+%%% (automatically generated text)                %%%
 \usepackage[english]{babel}
+
 % Use the palatino font
 \usepackage[sc]{mathpazo}
-\linespread{1.05}         % Palatino needs more leading (space between lines)
+\linespread{1.05} % Palatino needs more leading (space between lines)
+
 % Choose the font encoding
 \usepackage[T1]{fontenc}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Graphics and Tables
-% http://en.wikibooks.org/wiki/LaTeX/Importing_Graphics
-% http://en.wikibooks.org/wiki/LaTeX/Tables
-% http://en.wikibooks.org/wiki/LaTeX/Colors
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% load a colour package
-\usepackage{xcolor}
-%\usepackage{wrapfig}
-\definecolor{aaublue}{RGB}{33,26,82}% dark blue
-% The standard graphics inclusion package
-\usepackage{graphicx}
-% Set up how figure and table captions are displayed
-\usepackage{caption}
-%\usepackage{subcaption}
-\captionsetup{%
-  font=footnotesize,% set font size to footnotesize
-  labelfont=bf % bold label (e.g., Figure 3.2) font
-}
-% Make the standard latex tables look so much better
-\usepackage{array,booktabs}
-% Enable the use of frames around, e.g., theorems
-% The framed package is used in the example environment
-\usepackage{framed}
-
-% Adds support for full page background picture
-\usepackage[contents={},color=gray]{background}
-%\usepackage[contents=draft,color=gray]{background}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Mathematics
-% http://en.wikibooks.org/wiki/LaTeX/Mathematics
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Defines new environments such as equation,
-% align and split 
-\usepackage{amsmath}
-% Adds new math symbols
-\usepackage{amssymb}
-% Use theorems in your document
-% The ntheorem package is also used for the example environment
-% When using thmmarks, amsmath must be an option as well. Otherwise \eqref doesn't work anymore.
-\usepackage[framed,amsmath,thmmarks]{ntheorem}
-\newenvironment{inlineCode}{\fontfamily{pcr}\selectfont}{\par}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Page Layout
@@ -74,9 +45,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Change margins, papersize, etc of the document
 \usepackage[
-  inner=28mm,% left margin on an odd page
-  outer=41mm,% right margin on an odd page
+  inner=28mm, % Left margin on an odd page
+  outer=41mm, % Right margin on an odd page
 ]{geometry}
+
 % Modify how \chapter, \section, etc. look
 % The titlesec package is very configureable
 \usepackage{titlesec}
@@ -86,6 +58,10 @@
 \titleformat*{\subsubsection}{\normalfont\normalsize\bfseries}
 %\titleformat*{\paragraph}{\normalfont\normalsize\bfseries}
 %\titleformat*{\subparagraph}{\normalfont\normalsize\bfseries}
+
+% Setting level of numbering (default for "report" is 3)
+% With '-1' you have non number also for chapters
+\setcounter{secnumdepth}{3}
 
 % Clear empty pages between chapters
 \let\origdoublepage\cleardoublepage
@@ -98,44 +74,58 @@
 % Change the headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{} %delete everything
-\renewcommand{\headrulewidth}{0pt} %remove the horizontal line in the header
+\fancyhf{} % Delete everything
+\renewcommand{\headrulewidth}{0pt} % Remove the horizontal line in the header
 
+%%%%%%%%%%%%%%%%%%
 %%% Onepage setup - with fixed position for page number and text
+
 \fancyhead[L]{\small\nouppercase\leftmark}
 \fancyhead[R]{\thepage}
 
-%%% Twopage setup - with alternating position for page number and text !!REMEMBER!! To change margin settings in "master.tex"
+%%% Twopage setup (book-style) with alternating position
+%%% for page number and text 
+%%% !!REMEMBER!! To change margin settings in "master.tex"
+
 % \fancyhead[RE]{\small\nouppercase\leftmark} %even page - chapter title
 % \fancyhead[LO]{\small\nouppercase\rightmark} %uneven page - section title
 % \fancyhead[LE,RO]{\thepage} %page number on all pages
+%%%%%%%%%%%%%%%%%%
 
 % Do not stretch the content of a page. Instead,
 % insert white space at the bottom of the page
 \raggedbottom
+
 % Enable arithmetics with length. Useful when
 % typesetting the layout.
 \usepackage{calc}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 % http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Adds the bibliography used for citing
 \usepackage[backend=biber,
   bibencoding=utf8,
   style=numeric-comp
 ]{biblatex}
 \addbibresource{bib/mybib}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Misc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Add bibliography and index to the table of
 % contents
 \usepackage[nottoc]{tocbibind}
+
 % Add the command \pageref{LastPage} which refers to the
 % page number of the last page
 \usepackage{lastpage}
+
 % Add todo notes in the margin of the document
 \usepackage[
   %  disable, %turn off todonotes
@@ -144,15 +134,15 @@
   textsize=scriptsize, %size of the text in the todonotes
 ]{todonotes}
 
-%\usepackage{color,soul}
-
 % Add quotes
 \usepackage{csquotes}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hyperlinks
 % http://en.wikibooks.org/wiki/LaTeX/Hyperlinks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Enable hyperlinks and insert info into the pdf
 % file. Hypperref should be loaded as one of the 
 % last packages
@@ -167,7 +157,14 @@
   colorlinks=false,%
   citecolor=black,%
   filecolor=black,%
-  linkcolor=black,% you should probably change this to black before printing
+  linkcolor=black,% This changes the color of the link - e.g. blue
   urlcolor=black,%
   pdfstartview=FitH%
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%               ! Packages !               %%%
+% New packages should be placed in the file for
+% packages. 
+%\input{setup/packages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -7,14 +7,14 @@
 % Creates the aau titlepage
 \newcommand{\aautitlepage}[3]{%
   {
-    %set up various length
+    % Set up various length
     \ifx\titlepageleftcolumnwidth\undefined
       \newlength{\titlepageleftcolumnwidth}
       \newlength{\titlepagerightcolumnwidth}
     \fi
     \setlength{\titlepageleftcolumnwidth}{0.5\textwidth-\tabcolsep}
     \setlength{\titlepagerightcolumnwidth}{\textwidth-2\tabcolsep-\titlepageleftcolumnwidth}
-    %create title page
+    % Create title page
     \thispagestyle{empty}
     \noindent%
     \begin{tabular}{@{}ll@{}}
@@ -37,16 +37,16 @@
       }\\
     \end{tabular}
     \vfill
-    \iflanguage{danish}{%
-      \noindent{\footnotesize\emph{Rapportens indhold er frit tilgængeligt, men offentliggørelse (med kildeangivelse) må kun ske efter aftale med forfatterne.}}
-    }{%
+    %\iflanguage{danish}{%
+    %  \noindent{\footnotesize\emph{Rapportens indhold er frit tilgængeligt, men offentliggørelse (med kildeangivelse) må kun ske efter aftale med forfatterne.}}
+    %}{%
       %\noindent{\footnotesize\emph{The content of this report is freely available, but publication (with reference) may only be pursued due to agreement with the author.}}
-    }
+    %}
     \clearpage
   }
 }
 
-%Create english project info
+% Create english project info
 \newcommand{\englishprojectinfo}[8]{%
   \parbox[t]{\titlepageleftcolumnwidth}{
     \textbf{Title:}\\ #1\bigskip\par
@@ -59,11 +59,11 @@
     \textbf{Page Numbers:} \pageref{LastPage}\bigskip\par
     \textbf{Date of Completion:}\\ #8\bigskip\par
     \footnotesize\emph{The content of this report is freely available, but publication (with reference) may only be pursued due to agreement with the author.}\bigskip\par
-    \noindent Copyright \copyright{} Aalborg University 2022
+    \noindent Copyright \copyright{} Aalborg University \the\year
   }
 }
 
-%Create danish project info
+% Create danish project info
 \newcommand{\danishprojectinfo}[8]{%
   \parbox[t]{\titlepageleftcolumnwidth}{
     \textbf{Titel:}\\ #1\bigskip\par
@@ -75,6 +75,8 @@
     \textbf{Oplagstal:} #7\bigskip\par
     \textbf{Sidetal:} \pageref{LastPage}\bigskip\par
     \textbf{Afleveringsdato:}\\ #8
+    \footnotesize\emph{Rapportens indhold er frit tilgængeligt, men offentliggørelse (med kildeangivelse) må kun ske efter aftale med forfatterne.}\bigskip\par
+    \noindent Copyright \copyright{} Aalborg University \the\year
   }
 }
 

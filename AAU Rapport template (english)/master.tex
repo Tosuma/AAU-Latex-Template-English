@@ -1,38 +1,73 @@
-\input{setup/preamble.tex}     % Set up of the document
-\input{setup/customPackages}   % New packages inclusion
+\input{setup/preamble.tex}     % Set up of the document - do not touch unless you know what you are doing!
+\input{setup/packages}         % New packages should be included here
 \input{setup/hyphenations.tex} % How to split words
-\input{setup/macros.tex}       % My new macros
+\input{setup/macros.tex}       % Macros for making the frontpage
 \input{CustomCommands}         % Custom commands
 
-\setlength{\marginparwidth}{2cm} % !!If using two pages-setup mark this line as comment
+%%%%%%%%%%%%%%%%%%
+%%% Change here for one- 
+%%% or two-page setup
+\setlength{\marginparwidth}{2cm} % !!If using two pages-setup (book-style) mark this line as comment
+%%%%%%%%%%%%%%%%%%
 
+% Begins the document for text
 \begin{document}
-%frontmatter
-\pagestyle{empty} %disable headers and footers
-\pagenumbering{roman} %use roman page numbering in the frontmatter
 
-%%% Front page %%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Frontmatter %%%%%%%%%%
+% Setup for pages before content of the paper
+
+\pagestyle{empty}     % Disable headers and footers
+\pagenumbering{roman} % Use roman page numbering in the frontmatter
+
+
+%%%%%%%%%%%%%% Front pages %%%%%%%%%%%%%
 \input{sections/0frontpages/frontpageImage}
 \input{sections/0frontpages/frontpage}
 \input{sections/0frontpages/titlepages}
 \cleardoublepage
 
 \pdfbookmark[0]{Contents}{label:contents}
-\pagestyle{fancy} %enable headers and footers again
+\pagestyle{fancy} % Enable headers and footers again
+
+% Insert table of contents
 \tableofcontents
-\listoftodos
-%\input{sections/0frontpages/preface}
+
+% Inserts a list of ToDos
+\listoftodos % Comment this to remove ToDos from paper
+
+% Preface with signatures
+\input{sections/0frontpages/preface} % Comment this line to remove Preface with signatures
 \cleardoublepage
-%mainmatter
-\pagenumbering{arabic} %use arabic page numbering in the mainmatter
-% If you do not write the report in English, translating the bibliography title to, e.g., Danish, should not be done here. Instead, you should change the main language in the preamble (look for the line \usepackage[danish,english]{babel} and change the order/delete the 'english' option). See more in the babel package documentation.
 
-\input{docSetup} % Use this file to input all chapters
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Mainmatter %%%%%%%%%%
+% Setup for the main content of the paper
+
+% If you do not write the report in English,
+% translating the bibliography title to, e.g., Danish,
+% should not be done here. Instead, you should change the
+% main language in the preamble (look for the line \usepackage[english]{babel}
+% and change the 'english' option to danish). See more in the babel package documentation.
+\pagenumbering{arabic} % Use arabic page numbering in the mainmatter
+
+
+%%%%%%%%%%%%%%% Chapters %%%%%%%%%%%%%%%
+% Use this file to input all chapters
+\input{docSetup} 
+
+
+%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%
 \printbibliography[heading=bibintoc, title=Bibliography]
 \label{bib:mybiblio}
-\appendix
 
+
+%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%
+\appendix
 \input{sections/8appendix/!Header_appendix} % Use this file to input the material for the appendix
 
+
+% End of document
 \end{document}
