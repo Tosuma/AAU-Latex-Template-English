@@ -13,21 +13,23 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
 2. Run installation script:
 
     1. [Windows](./setupWSL.sh):
+
+        - Must be runned in WSL
     
         ```bash
-        script="./setupWSL.sh"
+        ./setupWSL.sh
         ```
 
     2. [Mac](./setupMac.sh):
     
         ```bash
-        script="./setupMac.sh"
+        ./setupMac.sh
         ```
 
     3. [Ubuntu](./setupUbuntu.sh): 
     
         ```bash
-        script="./setupUbunto.sh"
+        ./setupUbunto.sh
         ```
 
     You may need to enter your password for the user
