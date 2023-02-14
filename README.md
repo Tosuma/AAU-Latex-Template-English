@@ -29,7 +29,7 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
     3. [Ubuntu](./setupUbuntu.sh): 
     
         ```bash
-        ./setupUbunto.sh
+        ./setupUbuntu.sh
         ```
 
     You may need to enter your password for the user
