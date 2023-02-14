@@ -52,6 +52,8 @@ code .
 
 ## How to compile the project
 
+*Remember to make the Project Settings*
+
 When a ``.tex`` file is open, *LaTeX-Workshop* will present a green playbutton in the upper right corner to compile the current file.
 
 The project most likely contain either a ``master.tex`` or ``main.tex`` which makes setup and inclusion of all the different ``.tex`` files. 
@@ -71,7 +73,7 @@ In general you want to compile that file, however, the explanation of how to com
 
 ## General settings for Latex
 
-Place the following file in ``/.vscode/``
+Place the following file in ``/.vscode/`` (create if it does not exist)
 
 settings.json :
 
