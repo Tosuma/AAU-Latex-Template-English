@@ -1,134 +1,69 @@
-# Disclaimer
+**Disclaimer**
 
 This guide is for how to install LaTeX and how to compile LaTeX using VS Code as the IDE.
 
-This guide assumes the system uses the ``apt`` package manager.
+This guide assumes the system uses the ``apt`` or ``brew`` package manager, and that [Windows systems uses a terminal within WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
+## Installation
 
-# Install LaTeX
+1. [Install VS Code](https://code.visualstudio.com/) and the extension [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.LaTeX-workshop)
 
-1. Install VS Code
+    1. Windows also need the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension.
 
-2. Run installation script (``setupUbunto.sh``) in shell
+2. Run installation script:
+
+    1. [Windows](./setupWSL.sh):
+    
+        ```bash
+        script="./setupWSL.sh"
+        ```
+
+    2. [Mac](./setupMac.sh):
+    
+        ```bash
+        script="./setupMac.sh"
+        ```
+
+    3. [Ubuntu](./setupUbuntu.sh): 
+    
+        ```bash
+        script="./setupUbunto.sh"
+        ```
+
+    You may need to enter your password for the user
+
+    ```bash
+    sudo chmod u+x $script && $script
+    ```
 
 3. Ready to use
 
-
-
-## VS Code
-
-Download from: https://code.visualstudio.com/  
-Install the following extensions:
-
-1. Latex-Workshop *by James Yu* - [Marketplace](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
-
-
-## Command to execute script
-
-You may need to enter your password for the user
-
-```bash
-sudo chmod u+x setup.sh && ./setup.sh
-```
-
-
-## Installation script
-
-setupUbunto.sh :
-
-```bash
-#!/bin/bash
-
-LIST_OF_PACKAGES="build-essential texlive-full python3-pygments python-is-python3 openjdk-11-jdk"
-sudo apt update && sudo apt upgrade -y && sudo apt install ${LIST_OF_PACKAGES} -y
-```
-
-
-# How to use LaTeX
-
 ## How to open a project
-
-### Manually opening the project
 
 1. Enter the path in the shell / Navigate to the project in the shell
 
 2. Enter the following command to launch VS Code (If using other IDE use its launch command)
 
-```Bash
+```bash
 code .
 ```
-
-
-### Use a script to open the project
-
-A bash script can be made to automatically enter the path of the project and open it in VS Code.
-
-1. Make a file which opens the project by using the following command
-
-```Bash
-touch open.sh
-```
-
-2. Open the file using VIM
-
-```Bash
-vim open.sh
-```
-
-3. Insert the following script
-
-open.sh :
-
-```Bash
-#!/bin/bash
-
-cd {Path}
-code .
-```
-
-Example :
-
-```Bash
-#!/bin/bash
-
-cd /home/AAU/Code
-code .
-```
-
-4. To exit VIM press the esc-button, write ``:wq`` and press enter
-
-
-
-5. To run the script enter the follwing
-
-```Bash
-./open.sh
-```
-
 
 ## How to compile the project
 
-### Generally
+When a ``.tex`` file is open, *LaTeX-Workshop* will present a green playbutton in the upper right corner to compile the current file.
 
 The project most likely contain either a ``master.tex`` or ``main.tex`` which makes setup and inclusion of all the different ``.tex`` files. 
 In general you want to compile that file, however, the explanation of how to compile has been abstracted to how compile in general.
 
-
 ### Using VS Code
 
-1. By having the extension package *Latex-Workshop* a green playbutton will apear in the upper right corner which will compile the current ``.tex`` file
+1. Press the green button to compile
 
-2. Open the file you want to compile
+2. The file has been compiled into a pdf with the same name
 
-3. Press the green playbutton. The file will now compile and you can open the pdf named after the file
+3. A small icon next to the compile button, opens a preview of the pdf next to the editor, which updates upon re-compiling
 
-4. A small icon next to the playbutton will give you the possibility to open a preview of the pdf next to the editor - and upon re-compiling the preview will update to the new pdf
-
-
-### Using commandline
-
-*Comming soon in a theater near you*
-
+<!-- ### Using commandline -->
 
 # Project settings
 
