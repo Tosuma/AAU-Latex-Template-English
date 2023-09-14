@@ -12,7 +12,7 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
 
 2. Run installation script:
 
-    1. [Windows](./setupWSL.sh):
+    1. [Windows](./_Scripts/setupWSL.sh):
 
         - Must be runned in WSL
     
@@ -20,13 +20,13 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
         ./setupWSL.sh
         ```
 
-    2. [Mac](./setupMac.sh):
+    2. [Mac](./_Scripts/setupMac.sh):
     
         ```bash
         ./setupMac.sh
         ```
 
-    3. [Ubuntu](./setupUbuntu.sh): 
+    3. [Ubuntu](./_Scripts/setupUbuntu.sh): 
     
         ```bash
         ./setupUbuntu.sh
