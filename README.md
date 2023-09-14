@@ -1,3 +1,5 @@
+# Local LaTeX installation guide
+
 **Disclaimer**
 
 This guide is for how to install LaTeX and how to compile LaTeX using VS Code as the IDE.
