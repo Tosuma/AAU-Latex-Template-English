@@ -1,5 +1,6 @@
 % !TEX root = ./master.tex
 \input{setup/preamble.tex}     % Set up of the document - do not touch unless you know what you are doing!
+\input{setup/acronyms.tex}     % Adding the acronyms.
 \input{setup/packages}         % New packages should be included here
 \input{setup/hyphenations.tex} % How to split words
 \input{setup/macros.tex}       % Macros for making the frontpage
@@ -58,6 +59,10 @@
 %%%%%%%%%%%%%%% Chapters %%%%%%%%%%%%%%%
 % Use this file to input all chapters
 \input{docSetup} 
+
+%%%%%%%%%%%%%%% Acronyms %%%%%%%%%%%%%%%
+% This prints the acronyms used in the paper.
+\printglossary[type=\acronymtype]
 
 
 %%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%
