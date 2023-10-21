@@ -1,4 +1,4 @@
-\pdfbookmark[0]{Front page}{label:frontpage}%
+\pdfbookmark[0]{Front page}{label:frontpage-image}%
 
 \begin{titlepage}
 \newgeometry{top=0cm,bottom=1.2cm,right=0cm,left=0cm}
@@ -23,7 +23,7 @@
         \centering
         \Huge{\textbf{
             % Insert your title here
-            Insert title here
+            \the\projectTitle
         }}
     \end{minipage}
     }
@@ -34,7 +34,7 @@
         \centering
         \Large{
             % Insert your subtitle here
-            Insert subtitle here
+            \the\projectSubtitle
         }
     \end{minipage}
     }
@@ -45,7 +45,34 @@
         \centering
         {\Large
             % Insert names separated by comma
-            Insert names here
+            \if \the\groupMemberOne ""
+            \else
+            \the\groupMemberOne
+            \fi
+            \if \the\groupMemberTwo ""
+            \else
+            , \the\groupMemberTwo
+            \fi
+            \if \the\groupMemberThree ""
+            \else
+            , \the\groupMemberThree
+            \fi
+            \if \the\groupMemberFour ""
+            \else
+            , \the\groupMemberFour
+            \fi
+            \if \the\groupMemberFive ""
+            \else
+            , \the\groupMemberFive
+            \fi
+            \if \the\groupMemberSix ""
+            \else
+            , \the\groupMemberSix
+            \fi
+            \if \the\groupMemberSeven ""
+            \else
+            , \the\groupMemberSeven
+            \fi
         }
     \end{minipage}
     }
@@ -55,7 +82,7 @@
         \bigskip
         \centering
         {\large
-            Department of Computer Science, DAT-\{Insert semester\}, \the\year-\the\month-\the\day % Insert semester
+            Department of Computer Science, DAT-\{\the\semester\}, \the\year-\the\month-\the\day % Insert semester
         } 
     \end{minipage}
     }

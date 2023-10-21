@@ -4,22 +4,49 @@
 \aautitlepage{%
     \englishprojectinfo{
         % Title
-        Insert tilte
+        \the\projectTitle
     }{%
         % Theme
-        Insert theme
+        \the\projectTheme
     }{%
         % Project period
-        Insert period
+        \the\projectPeriod
     }{%
         % Project group
-        Insert groupe number/name
+        \the\groupNumber
     }{%
         % List of group members
-        Insert group member names
+        \if \the\groupMemberOne ""
+        \else
+        \the\groupMemberOne
+        \fi
+        \if \the\groupMemberTwo ""
+        \else
+        \\\the\groupMemberTwo
+        \fi
+        \if \the\groupMemberThree ""
+        \else
+        \\\the\groupMemberThree
+        \fi
+        \if \the\groupMemberFour ""
+        \else
+        \\\the\groupMemberFour
+        \fi
+        \if \the\groupMemberFive ""
+        \else
+        \\\the\groupMemberFive
+        \fi
+        \if \the\groupMemberSix ""
+        \else
+        \\\the\groupMemberSix
+        \fi
+        \if \the\groupMemberSeven ""
+        \else
+        \\\the\groupMemberSeven
+        \fi
     }{%
         % List of supervisors
-        Insert supervisor names
+        \the\supervisor
     }{%
         1 % Number of printed copies
     }{%
@@ -30,7 +57,7 @@
  Aalborg University\\
  \href{http://www.aau.dk}{http://www.aau.dk}
 }{% The abstract
-Insert abstract
+\the\projectAbstract
 }
 
 % DANSK %

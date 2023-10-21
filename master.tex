@@ -1,10 +1,44 @@
 % !TEX root = ./master.tex
 \input{setup/preamble.tex}     % Set up of the document - do not touch unless you know what you are doing!
 \input{setup/acronyms.tex}     % Adding the acronyms.
-\input{setup/packages}         % New packages should be included here
+\input{setup/packages.tex}     % New packages should be included here
 \input{setup/hyphenations.tex} % How to split words
 \input{setup/macros.tex}       % Macros for making the frontpage
-\input{CustomCommands}         % Custom commands
+\input{CustomCommands.tex}     % Custom commands
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Group information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This file is for making the variables
+% which are used for inserting information
+% in the frontpages, titlepage and preface.
+\input{setup/information-variables.tex}
+
+% Insert your information in the following boxes.
+% You may leave them empty.
+
+% If not 7 members in group just leave the the
+% groupmembers empty from the buttom up.
+\groupMemberOne   = {Insert your name} % ie. John Doe
+\groupMemberTwo   = {John Doe} % ie. John Doe
+\groupMemberThree = {} % ie. John Doe
+\groupMemberFour  = {} % ie. John Doe
+\groupMemberFive  = {} % ie. John Doe
+\groupMemberSix   = {} % ie. John Doe
+\groupMemberSeven = {} % ie. John Doe
+
+\projectTitle     = {Insert project title here}
+\projectSubtitle  = {Insert project subtitle here or leave empty}
+\groupNumber      = {Insert group number here} % ie. 3.1.24
+\supervisor       = {Insert supervisor name here} % ie. John Doe
+\projectTheme     = {Insert project theme here} % ie. How to optimise LaTeX
+\projectPeriod    = {Insert project period here} % ie. Spring 2023
+\semester         = {Insert your semestser} % ie. 2. semester
+\projectAbstract  = {
+    Insert your abstract here.
+    It will apear in the abstract section on the titlepage.
+} % You can make linebreaks within the {}
+
 
 %%%%%%%%%%%%%%%%%%
 %%% Change here for one- 
@@ -25,9 +59,16 @@
 
 
 %%%%%%%%%%%%%% Front pages %%%%%%%%%%%%%
-\input{sections/0frontpages/frontpageImage}
-\input{sections/0frontpages/frontpage}
-\input{sections/0frontpages/titlepages}
+\input{sections/0frontpages/!index.tex}
+\input{sections/0frontpages/titlepage.tex}
+\cleardoublepage
+
+% Preface with signatures
+% It is recommended to remove this from
+% the paper since it has no real use.
+% NOTE: You have to manually change the
+% name and email in the file.
+\input{sections/0frontpages/preface.tex} % Comment this line to remove Preface with signatures
 \cleardoublepage
 
 \pdfbookmark[0]{Contents}{label:contents}
@@ -38,10 +79,6 @@
 
 % Inserts a list of ToDos
 \listoftodos % Comment this to remove ToDos from paper
-
-% Preface with signatures
-\input{sections/0frontpages/preface} % Comment this line to remove Preface with signatures
-\cleardoublepage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,7 +95,7 @@
 
 %%%%%%%%%%%%%%% Chapters %%%%%%%%%%%%%%%
 % Use this file to input all chapters
-\input{docSetup} 
+\input{docSetup.tex}
 
 %%%%%%%%%%%%%%% Acronyms %%%%%%%%%%%%%%%
 % This prints the acronyms used in the paper.
@@ -74,7 +111,8 @@
 
 %%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%
 \appendix
-\input{sections/8appendix/!index} % Use this file to input the material for the appendix
+% Use this file to input the material for the appendix
+\input{sections/8appendix/!index.tex}
 
 
 % End of document

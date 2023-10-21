@@ -1,0 +1,44 @@
+\pdfbookmark[0]{Front page}{label:frontpage-simple}%
+
+\begin{titlepage}
+  \addtolength{\hoffset}{0.5\evensidemargin-0.5\oddsidemargin} %set equal margins on the frontpage - remove this line if you want default margins
+  \noindent%
+  \begin{tabular}{@{}p{\textwidth}@{}}
+    \toprule[2pt]
+    \midrule
+    \vspace{0.2cm}
+    \begin{center}
+    \Huge{\textbf{
+        % Insert your title here
+        \the\projectTitle
+    }}
+    \end{center}
+    \begin{center}
+      \Large{
+        % Insert your subtitle here
+        \the\projectSubtitle
+      }
+    \end{center}
+    \vspace{0.2cm}\\
+    \midrule
+    \toprule[2pt]
+  \end{tabular}
+  \vspace{4 cm}
+  \begin{center}
+    {\large
+        %Insert document type (e.g., Project Report)
+        Project Paper
+    }\\
+    \vspace{0.2cm}
+    {\Large
+        %Insert your group name or real names here
+        \the\groupNumber
+    }
+  \end{center}
+  \vfill
+  \begin{center}
+  Aalborg University\\
+  Computer Science
+  \end{center}
+\end{titlepage}
+\clearpage
