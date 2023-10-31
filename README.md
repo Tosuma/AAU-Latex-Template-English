@@ -8,13 +8,15 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
 
 ## Installation
 
-1. [Install VS Code](https://code.visualstudio.com/) and the extension [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.LaTeX-workshop)
+1. [Install VS Code](https://code.visualstudio.com/) and the extension 
+
+2. Also Install extension [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.LaTeX-workshop) in VS Code
 
     1. Windows also need the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension.
 
-2. Run installation script:
+3. Run installation script:
 
-    1. [Windows](./_Scripts/setupWSL.sh):
+    1. [Windows](./scripts/setupWSL.sh):
 
         - Must be runned in WSL
     
@@ -22,16 +24,16 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
         ./setupWSL.sh
         ```
 
-    2. [Mac](./_Scripts/setupMac.sh):
+    2. [Mac](./scripts/setupMac.sh):
     
         ```bash
         ./setupMac.sh
         ```
 
-    3. [Ubuntu](./_Scripts/setupUbuntu.sh): 
+    3. [Ubuntu](./scripts/setupUbuntu.sh): 
     
         ```bash
-        ./setupUbuntu.sh
+        ./scripts/setupUbuntu.sh
         ```
 
     You may need to enter your password for the user
@@ -40,7 +42,7 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
     sudo chmod u+x $script && $script
     ```
 
-3. Ready to use
+4. Ready to use
 
 ## How to open a project
 
