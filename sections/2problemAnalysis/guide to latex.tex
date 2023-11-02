@@ -24,8 +24,9 @@ section numbering.
 
 Go to the file '\texttt{./!CODE Template.tex}' to get templates for coding blocks.
 
-This is how to make code blocks with the \texttt{lstlisting} package:
-\begin{figure}
+This is how to make code blocks with the \texttt{lstlisting} package (it can be
+seen in \autoref{lst:code-block}).
+\begin{figure}[h]
 \begin{lstlisting}[label={lst:code-block},caption={This is the caption of the
     code example},style=CSharpStyle]
 #include <stdio.h>
@@ -37,17 +38,22 @@ int main() {
 \end{lstlisting}
 \end{figure}
 
-% NOTE: The Minted coding block does not currently work
-% This is how to make code blocks with the \texttt{minted} package:
+\FloatBarrier
+NOTE: The Minted coding block does not currently work.
+This is how to make code blocks with the \texttt{minted} package (it can be seen
+in Listing \ref{listing:hello-world}).
 
+\begin{listing}[h]
 \begin{minted}{c}
 #include <stdio.h>
 int main() {
-    // printf() displays the string inside quotation
-    printf("Hello, World!");
+    printf("Hello, World!"); /*printf() outputs the quoted string*/
     return 0;
 }
 \end{minted}
+\caption{Hello World in C}
+\label{listing:hello-world}
+\end{listing}
 
 \subsection{How to make pseudocode blocks}
 
