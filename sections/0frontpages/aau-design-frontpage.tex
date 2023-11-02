@@ -1,4 +1,5 @@
-\pdfbookmark[0]{Front page}{label:frontpage}%
+\pdfbookmark[0]{Front page}{label:frontpage-aau}%
+
 \begin{titlepage}
 \vspace*{\fill}
     \backgroundsetup{ % legacy!!
@@ -13,24 +14,51 @@
     \begin{center}
     \Huge{\textbf{
         % Your title here
-        Insert title here
+        \the\projectTitle
     }}
     \end{center}
     \begin{center}
       \Large{
         % Your subtitle here
-        Insert subtitle here
+        \the\projectSubtitle
       }
     \end{center}
     \vspace{0.2cm}
    \begin{center}
     {\Large
         % Names separated by comma
-        Insert names here
-    }
+        \if \the\groupMemberOne ""
+        \else
+        \the\groupMemberOne
+        \fi
+        \if \the\groupMemberTwo ""
+        \else
+        , \the\groupMemberTwo
+        \fi
+        \if \the\groupMemberThree ""
+        \else
+        , \the\groupMemberThree
+        \fi
+        \if \the\groupMemberFour ""
+        \else
+        , \the\groupMemberFour
+        \fi
+        \if \the\groupMemberFive ""
+        \else
+        , \the\groupMemberFive
+        \fi
+        \if \the\groupMemberSix ""
+        \else
+        , \the\groupMemberSix
+        \fi
+        \if \the\groupMemberSeven ""
+        \else
+        , \the\groupMemberSeven
+        \fi
+    }\\
     \vspace{0.2cm}
     {\large
-      Department of Computer Science, DAT-\{Insert semester\}, \the\year-\the\month-\the\day % Insert semester
+      Department of Computer Science, DAT-\{\the\semester\}, \the\year-\the\month-\the\day % Insert semester
     }
    \end{center}
    %\vspace{0.2cm}
