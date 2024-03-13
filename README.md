@@ -21,19 +21,19 @@ This guide assumes the system uses the ``apt`` or ``brew`` package manager, and 
         - Must be runned in WSL
     
         ```bash
-        ./setupWSL.sh
+        sh ./_Scripts/setupWSL.sh
         ```
 
     2. [Mac](./scripts/setupMac.sh):
     
         ```bash
-        ./setupMac.sh
+        sh ./_Scripts/setupMac.sh
         ```
 
     3. [Ubuntu](./scripts/setupUbuntu.sh): 
     
         ```bash
-        ./scripts/setupUbuntu.sh
+        sh ./_Scripts/setupUbuntu.sh
         ```
 
     You may need to enter your password for the user
